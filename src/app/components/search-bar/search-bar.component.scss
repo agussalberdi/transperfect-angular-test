@@ -1,45 +1,13 @@
-@mixin button-base() {  
-    position: relative;
-    width: 120px;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 500ms;
-  
-    &:hover { 
-      color: black;
-      background: white;
-    }
-  
-    &:disabled {
-      cursor: default;
-      pointer-events: none;
-    }
+input#search {
+  display: block;
+  width: 80%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #b0b0b0;
+  margin: 20px auto;
 }
 
-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 10px;
-
-  input#search {
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #b0b0b0;
-    margin: 10px 0;
-    margin-right: 10px;
-  }
-
-  button.btn {
-    height: 50px;
-    margin: 0 10px;
-  }
-
+p.model-text {
+  text-align: center;
+  color: seagreen;
 }

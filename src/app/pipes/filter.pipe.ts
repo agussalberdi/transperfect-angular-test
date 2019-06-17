@@ -6,16 +6,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(issues: any[], searchNumber: string): any[] {
+  transform(issues: any[], search: string): any[] {
     if (!issues) {
       return [];
     }
-    if (!searchNumber) {
+    if (!search) {
       return issues;
     }
 
     return issues.filter(is => {
-      return is.number.toString().includes(searchNumber);
+      return is.number.toString().includes(search) || is.title.includes(search) || is.user.login.includes(search);
     });
   }
 

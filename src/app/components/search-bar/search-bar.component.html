@@ -1,11 +1,8 @@
-<div>
-  <input type="search" 
-        id="search" 
-        name="issue" 
-        placeholder="Search issue by number..." 
-        [(ngModel)]="issue" 
-        (ngModelChange)="this.onChange();"
-  >
-  <button mat-stroked-button color="basic" class="btn">OPEN ISSUES</button>
-  <button mat-stroked-button color="basic" class="btn">CLOSED ISSUES</button>
-</div>
+<input type="search" 
+      id="search" 
+      name="issue" 
+      placeholder="Search issue by number, title or user..." 
+      [(ngModel)]="issue" 
+      (ngModelChange)="this.onChange();"
+>
+<p class="model-text mat-h4">{{issue}}</p>

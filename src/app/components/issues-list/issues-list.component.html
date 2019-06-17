@@ -1,13 +1,13 @@
 <app-search-bar (output)="onSearchChange($event)"></app-search-bar>
 <h1 class="mat-h1">Issues List</h1>
 <ul class="issues">
-  <li *ngFor="let issue of issues | filter : searchNumber | paginate: { itemsPerPage: 4, currentPage: p }">
+  <li *ngFor="let issue of issues | filter : search | paginate: { itemsPerPage: 4, currentPage: p }">
     <mat-card>
       <mat-card-header>
         <img mat-card-avatar src={{issue.user.avatar_url}}/>
         <mat-card-title>{{issue.user.login}}</mat-card-title>
         <mat-card-subtitle>
-          <a href="{{issue.user.url}}" target="blank">{{issue.user.url}}</a>
+          <a href="{{issue.user.url}}" target="blank" class="mat-h4">{{issue.user.url}}</a>
         </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
