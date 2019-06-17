@@ -1,0 +1,25 @@
+header {
+    background: rgb(35, 31, 39);
+    padding: 20px;
+
+    div.container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .logo {
+            display: inline-block;
+            font-weight: bold;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+    }
+}

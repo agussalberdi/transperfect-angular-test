@@ -1,0 +1,11 @@
+<div>
+  <input type="search" 
+        id="search" 
+        name="issue" 
+        placeholder="Search issue by number..." 
+        [(ngModel)]="issue" 
+        (ngModelChange)="this.onChange();"
+  >
+  <button id="openButton">OPEN ISSUES</button>
+  <button id="closedButton">CLOSED ISSUES</button>
+</div>

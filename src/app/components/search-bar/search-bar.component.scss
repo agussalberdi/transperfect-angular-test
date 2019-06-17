@@ -1,0 +1,49 @@
+@mixin button-base() {  
+    position: relative;
+    width: 120px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 500ms;
+  
+    &:hover { 
+      color: black;
+      background: white;
+    }
+  
+    &:disabled {
+      cursor: default;
+      pointer-events: none;
+    }
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  input#search {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #b0b0b0;
+    margin: 10px 0;
+    margin-right: 10px;
+  }
+
+  button#openButton {
+    @include button-base();
+    background-color: rgb(11, 241, 11);
+    margin-right: 10px;
+  }
+
+  button#closedButton {
+    @include button-base();
+    background-color: rgb(238, 15, 15);
+  }
+
+}

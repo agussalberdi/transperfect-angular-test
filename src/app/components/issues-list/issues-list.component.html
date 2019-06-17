@@ -1,0 +1,24 @@
+<h1 class="mat-h1">Issues List</h1>
+<app-search-bar (output)="onSearchChange($event)"></app-search-bar>
+<ul class="issues">
+  <li *ngFor="let issue of issues | filter : searchNumber">
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-avatar src={{issue.user.avatar_url}}/>
+        <mat-card-title>{{issue.user.login}}</mat-card-title>
+        <mat-card-subtitle><a href="{{issue.user.url}}" target="blank">{{issue.user.url}}</a></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+          <h3 class="mat-h3">Issue {{issue.number}}: {{issue.title}}</h3>
+          <p>State: {{issue.state}}</p>
+          <p *ngIf="issue.state == closed">{{issue.milestone.closed_at}}</p>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-card-actions>
+          <a mat-raised-button color="primary" href="{{issue.url}}" target="blank">ISSUE LINK</a>
+          <a mat-raised-button color="primary" href="{{issue.repository_url}}" target="blank">PROJECT LINK</a>
+        </mat-card-actions>
+      </mat-card-footer>
+    </mat-card>
+  </li>
+</ul>

@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    width: 90vw;
+    padding: 0;
+
+    li {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+
+        .mat-card-actions {
+            margin: 0;
+            margin-left: 15px;
+        }
+    }
+}
