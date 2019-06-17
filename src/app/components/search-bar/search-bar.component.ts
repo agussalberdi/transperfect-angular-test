@@ -15,7 +15,6 @@ export class SearchBarComponent implements OnInit {
   }
 
   onChange() {
-    console.log('SEARCHBAR: ', this.issue);
     this.output.emit(this.issue);
   }
 

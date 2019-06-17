@@ -9,6 +9,7 @@ import { IssueService } from '../../services/issue.service';
 export class IssuesListComponent implements OnInit {
   issues: any = [];
   searchNumber: string;
+  p: number = 1;
 
   constructor(public service: IssueService) {}
 
@@ -26,7 +27,6 @@ export class IssuesListComponent implements OnInit {
 
   onSearchChange($event) {
     this.searchNumber = $event;
-    console.log('ISSUESLIST: ', this.searchNumber);
   }
 
 }

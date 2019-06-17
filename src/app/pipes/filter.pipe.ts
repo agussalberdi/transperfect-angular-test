@@ -15,7 +15,6 @@ export class FilterPipe implements PipeTransform {
     }
 
     return issues.filter(is => {
-      console.log('PIPE: ', is.number.toString() === searchNumber);
       return is.number.toString().includes(searchNumber);
     });
   }

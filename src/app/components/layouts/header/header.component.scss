@@ -1,25 +1,26 @@
 header {
-    background: rgb(35, 31, 39);
-    padding: 20px;
+    position: relative;
+    background-color: rgb(29, 27, 27);
+    padding: 10px;
 
     div.container{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
 
         .logo {
             display: inline-block;
-            font-weight: bold;
-
+            margin-right: 10px;
+            
             img {
                 width: 50px;
             }
         }
 
         span {
-            font-weight: bold;
             font-size: 18px;
             color: white;
+            margin-bottom: 0;
         }
     }
 }

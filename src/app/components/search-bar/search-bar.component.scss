@@ -25,7 +25,9 @@
 div {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  padding: 10px;
 
   input#search {
     padding: 15px;
@@ -35,15 +37,9 @@ div {
     margin-right: 10px;
   }
 
-  button#openButton {
-    @include button-base();
-    background-color: rgb(11, 241, 11);
-    margin-right: 10px;
-  }
-
-  button#closedButton {
-    @include button-base();
-    background-color: rgb(238, 15, 15);
+  button.btn {
+    height: 50px;
+    margin: 0 10px;
   }
 
 }
