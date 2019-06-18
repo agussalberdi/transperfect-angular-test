@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
@@ -22,4 +21,10 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have a span with the title: 'Frontend Assesment Transperfect'`, async(() => {
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('Frontend Assesment Transperfect');
+  }));
+
 });

@@ -1,6 +1,8 @@
+@import "../../../../variables.scss";
+
 header {
     position: relative;
-    background-color: rgb(29, 27, 27);
+    background-color: $background;
     padding: 10px;
 
     div.container{
@@ -8,13 +10,8 @@ header {
         justify-content: center;
         align-items: center;
 
-        .logo {
-            display: inline-block;
-            margin-right: 10px;
-            
-            img {
-                width: 50px;
-            }
+        img {
+            width: 50px;
         }
 
         span {

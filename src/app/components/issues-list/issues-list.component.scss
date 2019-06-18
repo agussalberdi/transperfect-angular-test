@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 h1 {
     text-align: center;
 }
@@ -20,6 +22,14 @@ ul {
         .mat-card-actions {
             margin: 0;
             margin-left: 15px;
+        }
+
+        .success {
+            color: $success-color;
+        }
+
+        .alert {
+            color: $alert-color;
         }
     }
 }

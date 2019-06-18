@@ -13,7 +13,7 @@
       <mat-card-content>
           <h3 class="mat-h3">Issue number: <strong>{{issue.number}}</strong></h3>
           <h4 class="mat-h4">Title: <strong>{{issue.title}}</strong></h4>
-          <p>State: <strong>{{issue.state}}</strong></p>
+          <p>State: <strong [ngClass]="{ 'success': issue.state === 'open', 'alert': issue.state === 'closed' }">{{issue.state}}</strong></p>
           <p>Created at: <strong>{{issue.created_at}}</strong></p>
           <p *ngIf="issue.state == closed">{{issue.closed_at}}</p>
       </mat-card-content>

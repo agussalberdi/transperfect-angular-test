@@ -1,9 +1,11 @@
+@import "../../../variables.scss";
+
 input#search {
   display: block;
   width: 80%;
-  padding: 15px;
+  padding: 8px;
   border-radius: 5px;
-  border: 1px solid #b0b0b0;
+  border: 1px solid $basic-color;
   margin: 20px auto;
 }
 

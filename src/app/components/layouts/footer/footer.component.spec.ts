@@ -22,4 +22,9 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a paragraph with my name and current year', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('2019 Agustin Alberdi.');
+  });
 });

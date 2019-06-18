@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { IssuesListComponent } from './issues-list.component';
 import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 import { IssueService } from '../../services/issue.service';
@@ -31,4 +30,10 @@ describe('IssuesListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have an h1 with my title', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Issues List');
+  });
+
 });
