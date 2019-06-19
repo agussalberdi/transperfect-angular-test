@@ -4,13 +4,9 @@ import { IssuesListComponent } from './components/issues-list/issues-list.compon
 
 const routes: Routes = [
   {
-    path: 'issues-list',
+    path: '',
     component: IssuesListComponent,
     data: { title: 'Issues List' }
-  },
-  { path: '',
-    redirectTo: '/issues-list',
-    pathMatch: 'full'
   }
 ];
 
