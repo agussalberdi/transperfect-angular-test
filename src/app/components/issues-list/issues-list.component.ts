@@ -9,7 +9,7 @@ import { IssueService } from '../../services/issue.service';
 export class IssuesListComponent implements OnInit {
   issues: any = [];
   search: string;
-  p: number = 1;
+  p = 1;
 
   constructor(public service: IssueService) {}
 
