@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs/Subject';
 import { IssueService } from '../../services/issue.service';
 
 @Component({
@@ -6,7 +8,8 @@ import { IssueService } from '../../services/issue.service';
   templateUrl: './issues-list.component.html',
   styleUrls: ['./issues-list.component.scss']
 })
-export class IssuesListComponent implements OnInit {
+export class IssuesListComponent implements OnInit, OnDestroy {
+  destroySubject$: Subject<void> = new Subject();
   issues: any = [];
   search: string;
   p = 1;
@@ -19,13 +22,19 @@ export class IssuesListComponent implements OnInit {
 
   getIssues() {
     this.issues = [];
-    this.service.getIssues().subscribe((data) => {
-      this.issues = data;
-    });
+    this.service.getIssues()
+      .pipe(takeUntil(this.destroySubject$))
+      .subscribe((data) => {
+        this.issues = data;
+      });
   }
 
   onSearchChange($event) {
     this.search = $event;
+  }
+
+  ngOnDestroy() {
+    this.destroySubject$.next();
   }
 
 }
